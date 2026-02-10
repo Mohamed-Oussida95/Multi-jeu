@@ -9,7 +9,7 @@ public class Shifumi {
     	// TODO Auto-generated method stub
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Bienvenu dans le jeu Shifumi ");
+        System.out.println("Bienvenue dans le jeu Shifumi ");
         System.out.println("Règles : Tapez 1 pour Pierre, 2 pour Papier, 3 pour Ciseaux.");
 
         String[] choices = {"Pierre", "Papier", "Ciseaux"};
