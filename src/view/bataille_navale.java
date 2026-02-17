@@ -1,9 +1,11 @@
+package view;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
-public class BatailleNavale extends JFrame {
+public class bataille_navale extends JFrame {
 
     // Etats des cases (TD)
     static final int VIDE = 0;       // ? (non découvert)
@@ -32,12 +34,12 @@ public class BatailleNavale extends JFrame {
 
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
-            BatailleNavale frame = new BatailleNavale();
+            bataille_navale frame = new bataille_navale();
             frame.setVisible(true);
         });
     }
 
-    public BatailleNavale() {
+    public bataille_navale() {
         setTitle("Bataille Navale (5x5) - WindowBuilder");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 900, 520);
