@@ -263,7 +263,7 @@ public class bataille_navale extends JFrame {
     }
 
     private void finPartie(boolean joueurGagne) {
-        String msg = joueurGagne ? "✅ Vous avez gagné !" : "❌ L'ordinateur a gagné !";
+        String msg = joueurGagne ? "Vous avez gagné !" : "L'ordinateur a gagné !";
         lblInfo.setText(msg);
         JOptionPane.showMessageDialog(this, msg, "Fin de partie", JOptionPane.INFORMATION_MESSAGE);
     }
