@@ -7,7 +7,6 @@ import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.io.IOException;
-import java.awt.event.ActionEvent;
 
 public class View_accueil {
 
@@ -102,15 +101,6 @@ public class View_accueil {
             }
         });
         frame.getContentPane().add(btnShifumi);
-        
-        JButton btnCalculette_1 = new JButton("calculette");
-        btnCalculette_1.addActionListener(new ActionListener() {
-        	public void actionPerformed(ActionEvent e) {
-        	}
-        });
-        btnCalculette_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-        btnCalculette_1.setBounds(299, 240, 203, 93);
-        frame.getContentPane().add(btnCalculette_1);
     }
 }
 
