@@ -27,6 +27,7 @@ public class Vue_accueil {
     }
 
     private void initialize() {
+
         frame = new JFrame();
         frame.setBounds(100, 100, 790, 519);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -37,13 +38,18 @@ public class Vue_accueil {
         lblNewLabel.setBounds(210, 26, 379, 93);
         frame.getContentPane().add(lblNewLabel);
 
-        // === BTN CALCULETTE ===
+        // 🔥 Récupère classpath Eclipse automatiquement
+        String cp = System.getProperty("java.class.path");
+
+        // ================= CALCULETTE =================
         JButton btnCalculette = new JButton("calculette");
         btnCalculette.setFont(new Font("Tahoma", Font.PLAIN, 15));
         btnCalculette.setBounds(95, 159, 203, 93);
+
         btnCalculette.addActionListener(e -> {
             try {
-                ProcessBuilder pb = new ProcessBuilder("java", "-cp", ".", "View_calculette");
+                ProcessBuilder pb = new ProcessBuilder(
+                        "java", "-cp", cp, "view.View_calculette");
                 pb.inheritIO();
                 pb.start();
                 System.out.println("🧮 Calculette lancée !");
@@ -51,15 +57,18 @@ public class Vue_accueil {
                 ex.printStackTrace();
             }
         });
+
         frame.getContentPane().add(btnCalculette);
 
-        // === BTN DEVINER ===
+        // ================= DEVINER =================
         JButton btnDeviner = new JButton("deviner le nombre");
         btnDeviner.setFont(new Font("Tahoma", Font.PLAIN, 15));
         btnDeviner.setBounds(491, 159, 203, 93);
+
         btnDeviner.addActionListener(e -> {
             try {
-                ProcessBuilder pb = new ProcessBuilder("java", "-cp", ".", "view.deviner_le_nombre");
+                ProcessBuilder pb = new ProcessBuilder(
+                        "java", "-cp", cp, "view.DevinerNombre");
                 pb.inheritIO();
                 pb.start();
                 System.out.println("🎯 Deviner lancée !");
@@ -67,15 +76,18 @@ public class Vue_accueil {
                 ex.printStackTrace();
             }
         });
+
         frame.getContentPane().add(btnDeviner);
 
-        // === BTN BATAILLE ===
+        // ================= BATAILLE =================
         JButton btnBataille = new JButton("bataille navale");
         btnBataille.setFont(new Font("Tahoma", Font.PLAIN, 15));
         btnBataille.setBounds(491, 319, 203, 93);
+
         btnBataille.addActionListener(e -> {
             try {
-                ProcessBuilder pb = new ProcessBuilder("java", "-cp", ".", "view.bataille_navale");
+                ProcessBuilder pb = new ProcessBuilder(
+                        "java", "-cp", cp, "view.bataille_navale");
                 pb.inheritIO();
                 pb.start();
                 System.out.println("⚓ Bataille navale lancée !");
@@ -83,15 +95,18 @@ public class Vue_accueil {
                 ex.printStackTrace();
             }
         });
+
         frame.getContentPane().add(btnBataille);
 
-        // === BTN SHIFUMI ===
+        // ================= SHIFUMI =================
         JButton btnShifumi = new JButton("shifumi");
         btnShifumi.setFont(new Font("Tahoma", Font.PLAIN, 15));
         btnShifumi.setBounds(95, 319, 203, 93);
+
         btnShifumi.addActionListener(e -> {
             try {
-                ProcessBuilder pb = new ProcessBuilder("java", "-cp", ".", "view.Shifumi");
+                ProcessBuilder pb = new ProcessBuilder(
+                        "java", "-cp", cp, "view.Shifumi");
                 pb.inheritIO();
                 pb.start();
                 System.out.println("✂️ Shifumi lancée !");
@@ -99,7 +114,7 @@ public class Vue_accueil {
                 ex.printStackTrace();
             }
         });
+
         frame.getContentPane().add(btnShifumi);
     }
 }
-
