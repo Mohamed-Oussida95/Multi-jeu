@@ -7,14 +7,14 @@ import javax.swing.JButton;
 import java.awt.Font;
 import java.io.IOException;
 
-public class View_accueil {
+public class Vue_accueil {
 
     private JFrame frame;
 
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
             try {
-                View_accueil window = new View_accueil();
+                Vue_accueil window = new Vue_accueil();
                 window.frame.setVisible(true);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -22,7 +22,7 @@ public class View_accueil {
         });
     }
 
-    public View_accueil() {
+    public Vue_accueil() {
         initialize();
     }
 
