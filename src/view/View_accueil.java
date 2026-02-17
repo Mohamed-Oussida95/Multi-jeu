@@ -5,7 +5,6 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import java.awt.Font;
-import java.awt.event.ActionListener;
 import java.io.IOException;
 
 public class View_accueil {
@@ -44,7 +43,7 @@ public class View_accueil {
         btnCalculette.setBounds(95, 159, 203, 93);
         btnCalculette.addActionListener(e -> {
             try {
-                ProcessBuilder pb = new ProcessBuilder("java", "-cp", ".", "view.calculette");
+                ProcessBuilder pb = new ProcessBuilder("java", "-cp", ".", "View_calculette");
                 pb.inheritIO();
                 pb.start();
                 System.out.println("🧮 Calculette lancée !");
